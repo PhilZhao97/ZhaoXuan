@@ -1,0 +1,18 @@
+<table class="table is-bordered is-striped is-hoverable is-fullwidth">
+    
+    
+    
+    <tr><td><%= person.name %></td><td><%= person.age %></td></tr>
+    
+    
+
+</table>
+
+
+<form action="/person/delete/<%= person.id %>" method="post">
+    <div class="field">
+        <div class="control">
+            <button class="button is-link" type="submit">delete</button>
+        </div>
+    </div>
+</form>
