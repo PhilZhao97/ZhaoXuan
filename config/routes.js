@@ -33,6 +33,11 @@ module.exports.routes = {
   'GET /person/search': 'PersonController.search',
   'GET /person/paginate': 'PersonController.paginate',
 
+  'GET /user': 'UserController.login',
+'GET /user/login': 'UserController.login',
+'POST /user/login': 'UserController.login',
+'POST /user/logout': 'UserController.logout',
+
 
   /***************************************************************************
   *                                                                          *

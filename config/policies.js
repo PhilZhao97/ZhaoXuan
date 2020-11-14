@@ -10,6 +10,9 @@
 
 module.exports.policies = {
 
+  PersonController: {
+    create: 'isAdmin'
+  }
   /***************************************************************************
   *                                                                          *
   * Default policy for all controllers and actions, unless overridden.       *
