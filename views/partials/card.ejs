@@ -1,0 +1,31 @@
+
+<a href="/dining/detail/<%= dining.id %>">
+  <div class="card">
+    <div class="card-image">
+      <figure class="image is-4by3">
+        <img src="<%= dining.image %>" alt="<%= dining.restaurant %>">
+      </figure>
+    </div>
+    <div class="card-content">
+      <div class="media">
+        <h4 class="title is-4" style="color: #1795ff;">
+          <%= dining.restaurant %>
+        </h4>
+      </div>
+  
+      <div class="content">
+        <%= dining.title %>
+      </div>
+  
+      <div class="content">
+        Coins: <%= dining.coins %>
+      </div>
+      <% if (typeof user === 'undefined') {var user = undefined;} %>
+      <% if (user && user.role === 'member' && !dining.has_redeemed) { %>
+        <a href="/redeem/<%= dining.id %>" class="button is-link">Redeem</a>
+      <% } %>
+  
+    </div>
+  </div>
+</a>
+

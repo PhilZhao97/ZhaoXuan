@@ -1,4 +1,4 @@
-# lab-04
+# lab-4
 
 a [Sails v1](https://sailsjs.com) application
 
@@ -14,7 +14,7 @@ a [Sails v1](https://sailsjs.com) application
 
 ### Version info
 
-This app was originally generated on Fri Nov 13 2020 22:22:39 GMT+0800 (GMT+08:00) using Sails v1.4.0.
+This app was originally generated on Mon Oct 12 2020 11:07:19 GMT+0800 (GMT+08:00) using Sails v1.4.0.
 
 <!-- Internally, Sails used [`sails-generate@2.0.0`](https://github.com/balderdashy/sails-generate/tree/v2.0.0/lib/core-generators/new). -->
 

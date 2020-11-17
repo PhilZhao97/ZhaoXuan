@@ -1,3 +1,4 @@
+
 /**
  * User.js
  *
@@ -9,26 +10,27 @@ module.exports = {
 
   attributes: {
 
-    //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
-    //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
-    //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
-
-
-    //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
-    //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
-    //  ╚═╝╩ ╩╚═╝╚═╝═╩╝╚═╝
-
-
-    //  ╔═╗╔═╗╔═╗╔═╗╔═╗╦╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
-    //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
-    //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
-    username: {
-      type: "string"
+    name: {
+      type: "string",
+      unique: true,
+      required: true
     },
-    
+
+    role: {
+      type: "string",
+      isIn: ['admin', 'member', 'visitor'],
+      defaultsTo: 'visitor'
+    },
+
     password: {
-      type: "string"
+      type: "string",
+      defaultsTo: 'admin'
     },
+
+    coins: {
+      type: "number",
+      defaultsTo: 99999
+    }
 
   },
 

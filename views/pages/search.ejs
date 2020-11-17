@@ -1,0 +1,96 @@
+
+<div class="homepage-wrapper">
+  <div class="left-banner">
+    <h1 class="title">
+      Q-Pon
+    </h1>
+    <h2 class="subtitle">
+      Redeem your coins for dining coupons.
+    </h2>
+  </div>
+  <div class="right-banner">
+    Search Page
+  </div>
+</div>
+
+<div style="padding: 0 5rem;">
+  <div class="columns">
+    <div class="column is-two-thirds" style="display: flex;">
+      <% if (dinings.length) { %>
+        <% for (let dining of dinings.slice(0,2)) { %>
+          <div class="column is-half" style="width: 45%;">
+            <%- partial ('../partials/card.ejs', { dining: dining }) %>
+          </div>
+        <% } %>
+      <% } else { %>
+        <h1 class="title">Not match.</h1>
+      <% } %>
+    </div>
+
+    <!-- search form -->
+    <div class="column is-one-third">
+      <form method="POST" action="/dining/search">
+      <div class="field">
+        <label class="label">Region</label>
+        <div class="control">
+          <div class="select">
+            <select name="region">
+              <option value="none">Not Specifield</option>
+              <option value="HK Island">HK Island</option>
+              <option value="Kowloon">Kowloon</option>
+              <option value="New Territories">New Territories</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Min Coin</label>
+        <div class="control">
+          <input name="mincoin" class="input" type="number" placeholder="min coin">
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Max Coin</label>
+        <div class="control">
+          <input name="maxcoin" class="input" type="number" placeholder="max coin">
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Deal Valid Till</label>
+        <div class="control">
+          <input name="deal_valid_till" class="input" type="string" placeholder="dd/mm/yyyy">
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="control">
+          <button type="submit" class="button is-link">Search</button>
+        </div>
+      </div>
+    </form>
+
+    </div>
+  </div>
+
+  <% if (dinings.length > 2) { %>
+    <nav class="pagination" role="navigation" aria-label="pagination">
+      <a class="pagination-previous" title="This is the first page" disabled>Previous</a>
+      <a class="pagination-next">Next page</a>
+      <ul class="pagination-list">
+        <li>
+          <a class="pagination-link is-current" aria-label="Page 1" aria-current="page">1</a>
+        </li>
+        <li>
+          <a class="pagination-link" aria-label="Goto page 2">2</a>
+        </li>
+        <li>
+          <a class="pagination-link" aria-label="Goto page 3">3</a>
+        </li>
+      </ul>
+    </nav>
+  <% } %>
+</div>
+

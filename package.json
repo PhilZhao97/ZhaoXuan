@@ -1,5 +1,5 @@
 {
-  "name": "lab-04",
+  "name": "lab-4",
   "private": true,
   "version": "0.0.0",
   "description": "a Sails application",
@@ -26,7 +26,7 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/zhaoxuan/lab-04.git"
+    "url": "git://github.com/zhaoxuan/lab-4.git"
   },
   "author": "zhaoxuan",
   "license": "",

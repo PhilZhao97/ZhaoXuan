@@ -1,0 +1,30 @@
+
+<div class="section dining-detail columns">
+  <img class="column is-two-thirds  image" src="<%= dining.image %>" alt="<%= dining.restaurant %>">
+
+  <ul class="column is-one-third info">
+    <li class="info-item">
+      <%= dining.restaurant %>
+    </li>
+
+    <li class="info-item">
+      <%= dining.title %>
+    </li>
+
+    <li class="info-item">
+      Coins: <%= dining.coins %>
+    </li>
+
+    <li class="info-item">
+      Address: <%= dining.mall %>, <%= dining.region %>
+    </li>
+
+    <li class="info-item">
+      Valid Till: <%= dining.deal_valid_till %>
+    </li>
+
+    <li class="info-item">
+      <%= dining.detail %>
+    </li>
+  </ul>
+</div>

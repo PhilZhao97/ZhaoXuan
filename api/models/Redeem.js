@@ -1,7 +1,25 @@
 
+/**
+ * Redeem.js
+ *
+ * @description :: A model definition represents a database table/collection.
+ * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
+ */
+
 module.exports = {
 
   attributes: {
+    dining_id: {
+      type: 'number'
+    },
+
+    user_id: {
+      type: 'number',
+    },
+
+    user_name: {
+      type: 'string'
+    },
 
     title: {
       type: "string"
@@ -39,6 +57,10 @@ module.exports = {
       type: "string"
     },
 
+    has_redeemed: {
+      type: 'boolean',
+      defaultsTo: true
+    }
   },
 
 };

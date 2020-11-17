@@ -1,3 +1,10 @@
+/*
+ * @Date         : 2020-11-15 00:33:46
+ * @Author       : kefeng
+ * @LastEditors  : kefeng
+ * @LastEditTime : 2020-11-16 20:26:49
+ * @FilePath     : /comp7270-lab-5-PhilZhao97/config/globals.js
+ */
 /**
  * Global Variable Configuration
  * (sails.config.globals)

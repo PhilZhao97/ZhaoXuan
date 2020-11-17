@@ -1,4 +1,10 @@
-
+/*
+ * @Date         : 2020-11-15 03:28:09
+ * @Author       : kefeng
+ * @LastEditors  : kefeng
+ * @LastEditTime : 2020-11-15 04:22:33
+ * @FilePath     : /comp7270-lab-5-PhilZhao97/api/models/Dining.js
+ */
 module.exports = {
 
   attributes: {

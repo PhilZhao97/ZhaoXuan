@@ -1,0 +1,142 @@
+
+<% if (typeof isEdit == 'undefined') { %>
+  <% isEdit = false %>
+<% } %>
+
+<% if (typeof dining == 'undefined') { %>
+  <% dining = {
+    title: '',
+    coins: '',
+    region: '',
+    mall: '',
+    detail: '',
+    deal_valid_till: '',
+    quota: '',
+    image: '',
+    restaurant: ''
+  } %>
+<% } %>
+
+<div class="container" style="padding: 48px;">
+  <% if (isEdit) { %>
+    <form method="POST" action="/dining/update/<%= dining.id %>">
+
+  <% } else { %>
+    <form method="POST" action="/dining/create">
+  <% } %>
+  <div class="columns">
+    <div class="column is-half">
+
+      <div class="field">
+        <label class="label">Title</label>
+        <div class="control">
+          <input value="<%= dining.title %>" name="title" class="input" type="text" placeholder="Text input">
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Restaurant</label>
+        <div class="control">
+          <input value="<%= dining.restaurant %>" name="restaurant" class="input" type="text" placeholder="Text input">
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="field column is-half">
+          <label class="label">Region</label>
+          <div class="control">
+            <div class="select">
+              <select name="region">
+                <option selected="<%= dining.region === 'HK Island' %>" value="HK Island">HK Island</option>
+                <option selected="<%= dining.region === 'Kowloon' %>" value="Kowloon">Kowloon</option>
+                <option selected="<%= dining.region === 'New Territories' %>" value="New Territories">New Territories</option>
+              </select>
+            </div>
+          </div>
+        </div>
+  
+        <div class="field column is-half">
+          <label class="label">Mall</label>
+          <div class="control">
+            <div class="select">
+              <select name="mall">
+                <option selected="<%= dining.mall === 'IFC Mall' %>" value="IFC Mall">IFC Mall</option>
+                <option selected="<%= dining.mall === 'Pacific Place' %>" value="Pacific Place">Pacific Place</option>
+                <option selected="<%= dining.mall === 'Times Square' %>" value="Times Square">Times Square</option>
+                <option selected="<%= dining.mall === 'Elements' %>" value="Elements">Elements</option>
+                <option selected="<%= dining.mall === 'Harbour City' %>" value="Harbour City">Harbour City</option>
+                <option selected="<%= dining.mall === 'Festival Walk' %>" value="Festival Walk">Festival Walk</option>
+                <option selected="<%= dining.mall === 'MegaBox' %>" value="MegaBox">MegaBox</option>
+                <option selected="<%= dining.mall === 'APM' %>" value="APM">APM</option>
+                <option selected="<%= dining.mall === 'New Town Plaza' %>" value="New Town Plaza">New Town Plaza</option>
+                <option selected="<%= dining.mall === 'Tsuen Wan Plaza' %>" value="Tsuen Wan Plaza">Tsuen Wan Plaza</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      <div class="field">
+        <label class="label">Image</label>
+        <div class="control">
+          <input value="image" name="image" class="input" type="text" placeholder="Text input">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="column is-half">
+
+      <div class="columns">
+        <div class="field column is-half">
+          <label class="label">Quota</label>
+          <div class="control">
+            <input value="quota" name="quota" class="input" type="number" placeholder="Text input">
+          </div>
+        </div>
+  
+        <div class="field column is-half">
+          <label class="label">Coins</label>
+          <div class="control">
+            <input value="coins" name="coins" class="input" type="number" placeholder="Text input">
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Deal Valid Till</label>
+        <div class="control">
+          <input value="<%= dining.deal_valid_till %>" name="deal_valid_till" class="input" type="text" placeholder="Text input">
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Detail</label>
+        <div class="control">
+          <textarea name="detail" class="textarea" placeholder="Textarea">
+            <%= dining.detail %>
+          </textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="field is-grouped">
+    <div class="control">
+      <button type="submit" class="button is-link">Submit</button>
+    </div>
+    <div class="control">
+      <button type="reset" class="button is-link is-light">Cancel</button>
+    </div>
+
+    <% if (isEdit) { %> 
+      <div class="control">
+        <a class="button is-link is-danger" href="/dining/delete/<%= dining.id %>">
+          Delete
+        </a>
+      </div>
+    <% } %>
+  </div>
+</form>
+</div>

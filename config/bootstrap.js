@@ -10,30 +10,16 @@
  */
 
 module.exports.bootstrap = async function() {
+
   if (await Person.count() > 0) {
-    return generateUsers();
-  }
-  
-  await Person.createEach([
-    { name: "Martin Choy", age: 23 },
-    { name: "Kenny Cheng", age: 22 },
-    // etc.
-  ]);
-
-  return generateUsers();
-
-async function generateUsers() {
-
-	if (await User.count() > 0) {
-	  return;
-	}
-	
-	await User.createEach([
-	  { username: "admin", password: '123456' },
-	  { username: "boss", password: '123456' },
-	  // etc.
-	]);
+    return;
 }
+
+await Person.createEach([
+    { name: "Martin Choy", age: 23 },
+    { name: "Kenny Cheng", age: 22 }
+    // etc.
+]);
 
   // By convention, this is a good place to set up fake data during development.
   //
