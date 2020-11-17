@@ -1,3 +1,10 @@
+<!--
+ * @Date         : 2020-11-15 17:41:10
+ * @Author       : kefeng
+ * @LastEditors  : kefeng
+ * @LastEditTime : 2020-11-17 20:52:23
+ * @FilePath     : /ZhaoXuan/views/pages/admin.ejs
+-->
 
 <div class="homepage-wrapper">
   <div class="left-banner">
@@ -21,7 +28,6 @@
         <th>Title</th>
         <th>Restaurant</th>
         <th></th>
-        <th></th>
       </tr>
     </thead>
 
@@ -32,7 +38,6 @@
           <td><%= dining.title %></td>
           <td><%= dining.restaurant %></td>
           <td><a href="/dining/update/<%= dining.id %>">Update</a></td>
-          <td><a href="/dining/redeemed/<%= dining.id %>">Redeemed Members</a></td>
         </tr>
       <% } %>
     </tbody>

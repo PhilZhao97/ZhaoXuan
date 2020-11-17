@@ -1,3 +1,10 @@
+/*
+ * @Date         : 2020-11-15 00:33:46
+ * @Author       : kefeng
+ * @LastEditors  : kefeng
+ * @LastEditTime : 2020-11-17 20:53:25
+ * @FilePath     : /ZhaoXuan/config/routes.js
+ */
 /**
  * Route Mappings
  * (sails.config.routes)
@@ -40,9 +47,6 @@ module.exports.routes = {
   // detail
   'GET /dining/detail/:id': 'DiningController.read',
 
-  // redeemed
-  'GET /dining/redeemed/:id': 'DiningController.members',
-
   // admin
   'GET /admin': 'DiningController.list',
 
@@ -50,35 +54,8 @@ module.exports.routes = {
   'GET /search': 'DiningController.latestTwo',
   'POST /dining/search': 'DiningController.search',
 
-  // login
-  'GET /login': { view: 'pages/login' },
-  'POST /login': 'UserController.login',
-  'GET /signup': { view: 'pages/signup' },
-  'POST /signup': 'UserController.signup',
-  'GET /logout': 'UserController.logout',
-
-  'GET /myredeem': 'RedeemController.myredeem',
-  'GET /redeem/:id': 'RedeemController.redeem',
 
 
-  'GET /person/create': 'PersonController.create',
-  'POST /person/create': 'PersonController.create',
-
-
-
-  // 'GET /': 'PersonController.list',
-  'GET /person': 'PersonController.list',
-  'GET /person/list': 'PersonController.list',
-  'GET /person/json': 'PersonController.json',    
-  'GET /person/read/:id': 'PersonController.read',
-  'POST /person/delete/:id': 'PersonController.delete',
-
-  'GET /person/update/:id': 'PersonController.update',
-  'POST /person/update/:id': 'PersonController.update',
-  
-
-  'GET /person/search': 'PersonController.search',
-  'GET /person/paginate': 'PersonController.paginate',
 
   /***************************************************************************
   *                                                                          *
